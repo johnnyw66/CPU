@@ -527,22 +527,22 @@ end TCL_Generic;
     <comp lib="5" loc="(680,470)" name="Button"/>
     <comp lib="5" loc="(70,290)" name="Button"/>
     <comp lib="5" loc="(700,310)" name="7-Segment Display">
-      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@177a539f"/>
+      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@2383398f"/>
       <a name="label" val="digit4"/>
       <a name="labelloc" val="south"/>
     </comp>
     <comp lib="5" loc="(750,310)" name="7-Segment Display">
-      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@7b7443e9"/>
+      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@14572d0e"/>
       <a name="label" val="digit3"/>
       <a name="labelloc" val="south"/>
     </comp>
     <comp lib="5" loc="(800,310)" name="7-Segment Display">
-      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@300b5b75"/>
+      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@5a46081e"/>
       <a name="label" val="digit2"/>
       <a name="labelloc" val="south"/>
     </comp>
     <comp lib="5" loc="(850,310)" name="7-Segment Display">
-      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@79930b3"/>
+      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@7146c226"/>
       <a name="label" val="digit1"/>
       <a name="labelloc" val="south"/>
     </comp>
@@ -600,7 +600,6 @@ end TCL_Generic;
     <wire from="(280,290)" to="(280,360)"/>
     <wire from="(280,290)" to="(290,290)"/>
     <wire from="(280,360)" to="(300,360)"/>
-    <wire from="(370,670)" to="(380,670)"/>
     <wire from="(380,630)" to="(490,630)"/>
     <wire from="(380,650)" to="(410,650)"/>
     <wire from="(380,670)" to="(410,670)"/>
@@ -1316,13 +1315,49 @@ e6 10*0 10*12 10*bc 10*b6 10*d2 10*e6 10*ee
     <wire from="(370,30)" to="(370,120)"/>
   </circuit>
   <circuit name="alu">
-    <a name="appearance" val="logisim_evolution"/>
+    <a name="appearance" val="custom"/>
     <a name="circuit" val="alu"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="circuitvhdlpath" val=""/>
     <a name="clabel" val=""/>
     <a name="clabelfont" val="SansSerif bold 16"/>
     <a name="clabelup" val="east"/>
+    <appear>
+      <circ-anchor facing="east" height="6" width="6" x="267" y="57"/>
+      <circ-port height="10" pin="730,200" width="10" x="265" y="55"/>
+      <circ-port height="10" pin="900,290" width="10" x="265" y="75"/>
+      <circ-port height="10" pin="900,310" width="10" x="265" y="95"/>
+      <circ-port height="10" pin="900,330" width="10" x="265" y="115"/>
+      <circ-port height="10" pin="900,350" width="10" x="265" y="135"/>
+      <circ-port height="8" pin="100,100" width="8" x="46" y="76"/>
+      <circ-port height="8" pin="100,140" width="8" x="46" y="96"/>
+      <circ-port height="8" pin="140,370" width="8" x="46" y="136"/>
+      <circ-port height="8" pin="240,20" width="8" x="46" y="56"/>
+      <circ-port height="8" pin="40,270" width="8" x="46" y="116"/>
+      <rect fill="none" height="120" stroke="#000000" stroke-width="2" width="200" x="60" y="50"/>
+      <rect height="20" stroke="none" width="200" x="60" y="150"/>
+      <rect height="3" stroke="none" width="10" x="260" y="119"/>
+      <rect height="3" stroke="none" width="10" x="260" y="139"/>
+      <rect height="3" stroke="none" width="10" x="260" y="79"/>
+      <rect height="3" stroke="none" width="10" x="260" y="99"/>
+      <rect height="3" stroke="none" width="10" x="50" y="119"/>
+      <rect height="3" stroke="none" width="10" x="50" y="59"/>
+      <rect height="4" stroke="none" width="10" x="260" y="58"/>
+      <rect height="4" stroke="none" width="10" x="50" y="138"/>
+      <rect height="4" stroke="none" width="10" x="50" y="78"/>
+      <rect height="4" stroke="none" width="10" x="50" y="98"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="104">Z</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="124">P</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="144">V</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="64">res</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="255" y="84">C</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="104">B</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="124">en</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="144">fn</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="64">cin</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="84">A</text>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="160" y="164">alu</text>
+    </appear>
     <comp lib="0" loc="(100,100)" name="Pin">
       <a name="label" val="A"/>
       <a name="width" val="8"/>
