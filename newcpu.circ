@@ -8,7 +8,7 @@
       <a name="incoming" val="4"/>
     </tool>
     <tool name="Pin">
-      <a name="width" val="16"/>
+      <a name="width" val="6"/>
     </tool>
     <tool name="Probe">
       <a name="radix" val="10unsigned"/>
@@ -302,6 +302,16 @@ end TCL_Generic;
       <a name="label" val="pause"/>
       <a name="labelfont" val="SansSerif bold 10"/>
     </comp>
+    <comp lib="0" loc="(430,370)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="CLK"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(440,350)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="uRESET"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
     <comp lib="0" loc="(450,690)" name="Pin">
       <a name="radix" val="16"/>
       <a name="width" val="16"/>
@@ -315,6 +325,11 @@ end TCL_Generic;
     <comp lib="0" loc="(540,550)" name="Tunnel">
       <a name="label" val="uRESET"/>
       <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(570,350)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="6"/>
     </comp>
     <comp lib="0" loc="(600,140)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -610,6 +625,7 @@ end TCL_Generic;
     <comp loc="(180,460)" name="debounce"/>
     <comp loc="(200,140)" name="toggleswitch"/>
     <comp loc="(220,620)" name="alu"/>
+    <comp loc="(510,340)" name="ring6"/>
     <comp loc="(610,620)" name="pcreg"/>
     <comp loc="(800,490)" name="toggleswitch"/>
     <comp loc="(900,140)" name="segdisplay"/>
@@ -668,13 +684,17 @@ end TCL_Generic;
     <wire from="(280,120)" to="(300,120)"/>
     <wire from="(280,30)" to="(290,30)"/>
     <wire from="(390,40)" to="(390,60)"/>
+    <wire from="(430,370)" to="(460,370)"/>
+    <wire from="(440,350)" to="(460,350)"/>
     <wire from="(450,690)" to="(540,690)"/>
+    <wire from="(460,370)" to="(470,370)"/>
     <wire from="(490,650)" to="(540,650)"/>
     <wire from="(490,670)" to="(540,670)"/>
     <wire from="(500,710)" to="(540,710)"/>
     <wire from="(520,550)" to="(520,630)"/>
     <wire from="(520,550)" to="(540,550)"/>
     <wire from="(520,630)" to="(540,630)"/>
+    <wire from="(540,350)" to="(570,350)"/>
     <wire from="(60,330)" to="(110,330)"/>
     <wire from="(600,140)" to="(680,140)"/>
     <wire from="(600,160)" to="(670,160)"/>
@@ -4147,11 +4167,11 @@ e6 10*0 10*12 10*bc 10*b6 10*d2 10*e6 10*ee
       <a name="facing" val="north"/>
       <a name="label" val="Q"/>
       <a name="output" val="true"/>
-      <a name="width" val="4"/>
+      <a name="width" val="6"/>
     </comp>
     <comp lib="0" loc="(570,390)" name="Splitter">
-      <a name="fanout" val="4"/>
-      <a name="incoming" val="4"/>
+      <a name="fanout" val="6"/>
+      <a name="incoming" val="6"/>
     </comp>
     <comp lib="0" loc="(610,200)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -4169,17 +4189,23 @@ e6 10*0 10*12 10*bc 10*b6 10*d2 10*e6 10*ee
       <a name="facing" val="east"/>
       <a name="label" val="clk"/>
     </comp>
-    <comp lib="0" loc="(740,340)" name="Tunnel">
+    <comp lib="0" loc="(740,280)" name="Tunnel">
       <a name="label" val="q0"/>
     </comp>
-    <comp lib="0" loc="(740,370)" name="Tunnel">
+    <comp lib="0" loc="(740,310)" name="Tunnel">
       <a name="label" val="q1"/>
     </comp>
-    <comp lib="0" loc="(740,400)" name="Tunnel">
+    <comp lib="0" loc="(740,340)" name="Tunnel">
       <a name="label" val="q2"/>
     </comp>
-    <comp lib="0" loc="(740,430)" name="Tunnel">
+    <comp lib="0" loc="(740,370)" name="Tunnel">
       <a name="label" val="q3"/>
+    </comp>
+    <comp lib="0" loc="(740,400)" name="Tunnel">
+      <a name="label" val="q4"/>
+    </comp>
+    <comp lib="0" loc="(740,430)" name="Tunnel">
+      <a name="label" val="q5"/>
     </comp>
     <comp lib="0" loc="(780,220)" name="Tunnel">
       <a name="facing" val="north"/>
@@ -4283,6 +4309,8 @@ e6 10*0 10*12 10*bc 10*b6 10*d2 10*e6 10*ee
     <wire from="(570,160)" to="(570,260)"/>
     <wire from="(570,160)" to="(620,160)"/>
     <wire from="(570,260)" to="(690,260)"/>
+    <wire from="(590,330)" to="(710,330)"/>
+    <wire from="(590,340)" to="(720,340)"/>
     <wire from="(590,350)" to="(730,350)"/>
     <wire from="(590,360)" to="(730,360)"/>
     <wire from="(590,370)" to="(720,370)"/>
@@ -4297,8 +4325,12 @@ e6 10*0 10*12 10*bc 10*b6 10*d2 10*e6 10*ee
     <wire from="(700,160)" to="(700,260)"/>
     <wire from="(700,160)" to="(750,160)"/>
     <wire from="(700,260)" to="(820,260)"/>
+    <wire from="(710,280)" to="(710,330)"/>
+    <wire from="(710,280)" to="(740,280)"/>
     <wire from="(710,380)" to="(710,430)"/>
     <wire from="(710,430)" to="(740,430)"/>
+    <wire from="(720,310)" to="(720,340)"/>
+    <wire from="(720,310)" to="(740,310)"/>
     <wire from="(720,370)" to="(720,400)"/>
     <wire from="(720,400)" to="(740,400)"/>
     <wire from="(730,340)" to="(730,350)"/>
