@@ -1,3 +1,49 @@
 # CPU
 
 LogiSim CPU
+
+
+Control Lines  -
+
+
+
+Data BUS (DBUS) Output
+
+clENREGR	- ALU Results Register onto DBUS
+clEN4REG    - Bank Register used with 2'b{clSelBank1,clSelBank0}
+clENREGF    - Flag Register - Perhaps to Save on stack?
+clENKeyDBUS - Keyboard input (For Debugging)
+
+
+DBUS (Writing From)
+-----
+clWREGA -- Write to A Register
+clWREGB -- Write to B Register
+clWREGO -- Write to Output Register (on Display)
+clWREGF -- Write to Flag Reg
+clWREGR	-- Write to Results Register
+clWREGB0-- Write to RegBank reg 0
+clWREGB1-- Write to RegBank reg 1
+clWREGB2-- Write to RegBank reg 2
+clWREGB3-- Write to RegBank reg 3
+clWAL8BUS   - ABUSL (low) 8-bit Reg  (Note: Output mapped onto to LOW end of Address Bus)**
+clWAH8BUS   - ABUSH (High) 8-bit Reg (Note: Output mapped onto to High end of Address Bus)**  
+** Set both these bits high to get full 16 bit address onto bus before doing a write. Data comes from DBUS
+
+
+
+
+
+ABUS16 Support   Address BUS (ABUS16) Output
+
+clNotEnPCReg - PC Register (ACTIVE LOW!)
+clEnSPReg	- SP Register
+clEnAL8BUS  - 8 bits of AL8 Reg onto low end of ABUS16
+clEnAH8BUS  - 8 bits of AL8 Reg onto high end of ABUS16
+
+
+
+ABUS16 Support Writing
+
+clWPCReg  - Write to PC Register
+clWSPReg  - Write to SP Register
