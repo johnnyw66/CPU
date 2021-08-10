@@ -1,10 +1,13 @@
 # CPU
 
 LogiSim CPU
+10th August 2021
+Currently - newcpu.circ is the version running with latest LogiSim, 'LogiSim Evolution'.
+
+
 
 
 Control Lines  -
-
 
 
 Data BUS (DBUS) Output
@@ -33,7 +36,6 @@ clWAH8BUS   - ABUSH (High) 8-bit Reg (Note: Output mapped onto to High end of Ad
 
 
 
-
 ABUS16 Support   Address BUS (ABUS16) Output
 
 clNotEnPCReg - PC Register (ACTIVE LOW!)
@@ -47,3 +49,8 @@ ABUS16 Support Writing
 
 clWPCReg  - Write to PC Register
 clWSPReg  - Write to SP Register
+
+
+Need
+Instruction Register (8-bit)
+Memory Address Register (16-bit)?
