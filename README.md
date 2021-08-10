@@ -35,16 +35,17 @@ DBUS (Writing From)
 **clWAH8BUS**   - ABUSH (High) 8-bit Reg (Note: Output mapped onto to High end of Address Bus)+</br>
 + Set both these bits high to get full 16 bit address onto bus before doing a write. Data comes from DBUS</br>
 
+**clWREGI** -- Write to Instruction Register **TODO**</br>
 
 
 
 ABUS16 Support   Address BUS (ABUS16) Output
 ------
 
-clNotEnPCReg - PC Register (ACTIVE LOW!)</br>
-clEnSPReg	- SP Register</br>
-clEnAL8BUS  - 8 bits of AL8 Reg onto low end of ABUS16</br>
-clEnAH8BUS  - 8 bits of AL8 Reg onto high end of ABUS16</br>
+**clNotEnPCReg** - PC Register (ACTIVE LOW!)</br>
+**clEnSPReg**	- SP Register</br>
+**clEnAL8BUS**  - 8 bits of AL8 Reg onto low end of ABUS16</br>
+**clEnAH8BUS**  - 8 bits of AL8 Reg onto high end of ABUS16</br>
 
 
 
@@ -52,8 +53,9 @@ clEnAH8BUS  - 8 bits of AL8 Reg onto high end of ABUS16</br>
 ABUS16 Support Writing
 -----
 
-clWPCReg  - Write to PC Register</br>
-clWSPReg  - Write to SP Register</br>
+**clWPCReg**  - Write to PC Register</br>
+**clWSPReg**  - Write to SP Register</br>
+**clWMAReg**  - Write to Memory Address Register **TODO**</br>
 
 
 Need
