@@ -14,10 +14,10 @@ Control Lines  -
 
 Data BUS (DBUS) Output
 
-clENREGR	- ALU Results Register onto DBUS</br>
-clEN4REG    - Bank Register used with 2'b{clSelBank1,clSelBank0}</br>
-clENREGF    - Flag Register - Perhaps to Save on stack?</br>
-clENKeyDBUS - Keyboard input (For Debugging)</br>
+**clENREGR**	- ALU Results Register onto DBUS</br>
+**clEN4REG**    - Bank Register used with 2'b{clSelBank1,clSelBank0}</br>
+**clENREGF**    - Flag Register - Perhaps to Save on stack?</br>
+**clENKeyDBUS** - Keyboard input (For Debugging)</br>
 
 
 DBUS (Writing From)
