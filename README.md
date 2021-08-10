@@ -1,8 +1,10 @@
 # CPU
 
-LogiSim CPU
-10th August 2021
-Currently - newcpu.circ is the version running with latest LogiSim, 'LogiSim Evolution'.
+LogiSim CPU</br>
+
+10th August 2021 </br>
+Currently - newcpu.circ is the version running with latest LogiSim, 'LogiSim Evolution'.</br>
+
 
 
 
