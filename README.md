@@ -22,18 +22,18 @@ Data BUS (DBUS) Output
 
 DBUS (Writing From)
 -----
-clWREGA -- Write to A Register</br>
-clWREGB -- Write to B Register</br>
-clWREGO -- Write to Output Register (on Display)</br>
-clWREGF -- Write to Flag Reg</br>
-clWREGR	-- Write to Results Register</br>
-clWREGB0-- Write to RegBank reg 0</br>
-clWREGB1-- Write to RegBank reg 1</br>
-clWREGB2-- Write to RegBank reg 2</br>
-clWREGB3-- Write to RegBank reg 3</br>
-clWAL8BUS   - ABUSL (low) 8-bit Reg  (Note: Output mapped onto to LOW end of Address Bus)**</br>
-clWAH8BUS   - ABUSH (High) 8-bit Reg (Note: Output mapped onto to High end of Address Bus)**</br>
-** Set both these bits high to get full 16 bit address onto bus before doing a write. Data comes from DBUS</br>
+**clWREGA** -- Write to A Register</br>
+**clWREGB** -- Write to B Register</br>
+**clWREGO** -- Write to Output Register (on Display)</br>
+**clWREGF** -- Write to Flag Reg</br>
+**clWREGR**	-- Write to Results Register</br>
+**clWREGB0** -- Write to RegBank reg 0</br>
+**clWREGB1** -- Write to RegBank reg 1</br>
+**clWREGB2** -- Write to RegBank reg 2</br>
+**clWREGB3** -- Write to RegBank reg 3</br>
+**clWAL8BUS**   - ABUSL (low) 8-bit Reg  (Note: Output mapped onto to LOW end of Address Bus)+</br>
+**clWAH8BUS**   - ABUSH (High) 8-bit Reg (Note: Output mapped onto to High end of Address Bus)+</br>
++ Set both these bits high to get full 16 bit address onto bus before doing a write. Data comes from DBUS</br>
 
 
 
