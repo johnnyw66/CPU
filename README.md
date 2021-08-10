@@ -14,26 +14,26 @@ Control Lines  -
 
 Data BUS (DBUS) Output
 
-clENREGR	- ALU Results Register onto DBUS
-clEN4REG    - Bank Register used with 2'b{clSelBank1,clSelBank0}
-clENREGF    - Flag Register - Perhaps to Save on stack?
-clENKeyDBUS - Keyboard input (For Debugging)
+clENREGR	- ALU Results Register onto DBUS</br>
+clEN4REG    - Bank Register used with 2'b{clSelBank1,clSelBank0}</br>
+clENREGF    - Flag Register - Perhaps to Save on stack?</br>
+clENKeyDBUS - Keyboard input (For Debugging)</br>
 
 
 DBUS (Writing From)
 -----
-clWREGA -- Write to A Register
-clWREGB -- Write to B Register
-clWREGO -- Write to Output Register (on Display)
-clWREGF -- Write to Flag Reg
-clWREGR	-- Write to Results Register
-clWREGB0-- Write to RegBank reg 0
-clWREGB1-- Write to RegBank reg 1
-clWREGB2-- Write to RegBank reg 2
-clWREGB3-- Write to RegBank reg 3
-clWAL8BUS   - ABUSL (low) 8-bit Reg  (Note: Output mapped onto to LOW end of Address Bus)**
-clWAH8BUS   - ABUSH (High) 8-bit Reg (Note: Output mapped onto to High end of Address Bus)**  
-** Set both these bits high to get full 16 bit address onto bus before doing a write. Data comes from DBUS
+clWREGA -- Write to A Register</br>
+clWREGB -- Write to B Register</br>
+clWREGO -- Write to Output Register (on Display)</br>
+clWREGF -- Write to Flag Reg</br>
+clWREGR	-- Write to Results Register</br>
+clWREGB0-- Write to RegBank reg 0</br>
+clWREGB1-- Write to RegBank reg 1</br>
+clWREGB2-- Write to RegBank reg 2</br>
+clWREGB3-- Write to RegBank reg 3</br>
+clWAL8BUS   - ABUSL (low) 8-bit Reg  (Note: Output mapped onto to LOW end of Address Bus)**</br>
+clWAH8BUS   - ABUSH (High) 8-bit Reg (Note: Output mapped onto to High end of Address Bus)**</br>
+** Set both these bits high to get full 16 bit address onto bus before doing a write. Data comes from DBUS</br>
 
 
 
