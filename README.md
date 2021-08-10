@@ -39,20 +39,25 @@ clWAH8BUS   - ABUSH (High) 8-bit Reg (Note: Output mapped onto to High end of Ad
 
 
 ABUS16 Support   Address BUS (ABUS16) Output
+------
 
-clNotEnPCReg - PC Register (ACTIVE LOW!)
-clEnSPReg	- SP Register
-clEnAL8BUS  - 8 bits of AL8 Reg onto low end of ABUS16
-clEnAH8BUS  - 8 bits of AL8 Reg onto high end of ABUS16
+clNotEnPCReg - PC Register (ACTIVE LOW!)</br>
+clEnSPReg	- SP Register</br>
+clEnAL8BUS  - 8 bits of AL8 Reg onto low end of ABUS16</br>
+clEnAH8BUS  - 8 bits of AL8 Reg onto high end of ABUS16</br>
+
 
 
 
 ABUS16 Support Writing
+-----
 
-clWPCReg  - Write to PC Register
-clWSPReg  - Write to SP Register
+clWPCReg  - Write to PC Register</br>
+clWSPReg  - Write to SP Register</br>
 
 
 Need
-Instruction Register (8-bit)
-Memory Address Register (16-bit)?
+----
+
+Instruction Register (8-bit)</br>
+Memory Address Register (16-bit)?</br>
