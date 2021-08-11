@@ -732,9 +732,8 @@ end TCL_Generic;
       <a name="fanout" val="8"/>
       <a name="incoming" val="8"/>
     </comp>
-    <comp lib="0" loc="(460,2640)" name="Tunnel">
-      <a name="label" val="DBUS"/>
-      <a name="labelfont" val="SansSerif bold 12"/>
+    <comp lib="0" loc="(460,2510)" name="Pin">
+      <a name="output" val="true"/>
       <a name="width" val="8"/>
     </comp>
     <comp lib="0" loc="(480,1460)" name="Pull Resistor">
@@ -860,6 +859,11 @@ end TCL_Generic;
       <a name="facing" val="east"/>
       <a name="label" val="uRESET"/>
       <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(520,2640)" name="Tunnel">
+      <a name="label" val="DBUS"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+      <a name="width" val="8"/>
     </comp>
     <comp lib="0" loc="(520,950)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -1515,24 +1519,24 @@ end TCL_Generic;
     <comp lib="5" loc="(680,470)" name="Button"/>
     <comp lib="5" loc="(70,470)" name="Button"/>
     <comp lib="5" loc="(700,310)" name="7-Segment Display">
-      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@737c4b5f"/>
+      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@610fcd1"/>
       <a name="label" val="digit4"/>
       <a name="labelloc" val="south"/>
     </comp>
     <comp lib="5" loc="(750,310)" name="7-Segment Display">
-      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@35b4771f"/>
+      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@5979f795"/>
       <a name="label" val="digit3"/>
       <a name="labelloc" val="south"/>
     </comp>
     <comp lib="5" loc="(80,120)" name="Button"/>
     <comp lib="5" loc="(80,90)" name="Button"/>
     <comp lib="5" loc="(800,310)" name="7-Segment Display">
-      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@416c7bf3"/>
+      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@24cd0111"/>
       <a name="label" val="digit2"/>
       <a name="labelloc" val="south"/>
     </comp>
     <comp lib="5" loc="(850,310)" name="7-Segment Display">
-      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@1eaae04"/>
+      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@271301bf"/>
       <a name="label" val="digit1"/>
       <a name="labelloc" val="south"/>
     </comp>
@@ -1733,8 +1737,12 @@ end TCL_Generic;
     <wire from="(400,480)" to="(410,480)"/>
     <wire from="(410,1470)" to="(410,1490)"/>
     <wire from="(410,1630)" to="(410,1650)"/>
+    <wire from="(430,2640)" to="(440,2640)"/>
     <wire from="(440,1410)" to="(460,1410)"/>
     <wire from="(440,1570)" to="(460,1570)"/>
+    <wire from="(440,2530)" to="(440,2640)"/>
+    <wire from="(440,2530)" to="(470,2530)"/>
+    <wire from="(440,2640)" to="(520,2640)"/>
     <wire from="(460,1410)" to="(460,1430)"/>
     <wire from="(460,1410)" to="(490,1410)"/>
     <wire from="(460,1430)" to="(470,1430)"/>
@@ -1742,8 +1750,10 @@ end TCL_Generic;
     <wire from="(460,1540)" to="(500,1540)"/>
     <wire from="(460,1570)" to="(460,1590)"/>
     <wire from="(460,1570)" to="(490,1570)"/>
+    <wire from="(460,2510)" to="(470,2510)"/>
     <wire from="(470,1610)" to="(470,1760)"/>
     <wire from="(470,1760)" to="(550,1760)"/>
+    <wire from="(470,2510)" to="(470,2530)"/>
     <wire from="(480,1300)" to="(480,1340)"/>
     <wire from="(480,1300)" to="(500,1300)"/>
     <wire from="(480,1340)" to="(490,1340)"/>
@@ -1969,9 +1979,9 @@ end TCL_Generic;
     <wire from="(990,100)" to="(990,130)"/>
     <wire from="(990,130)" to="(1020,130)"/>
   </circuit>
-  <circuit name="ring">
+  <circuit name="ring4">
     <a name="appearance" val="custom"/>
-    <a name="circuit" val="ring"/>
+    <a name="circuit" val="ring4"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="circuitvhdlpath" val=""/>
     <a name="clabel" val=""/>
@@ -2405,7 +2415,7 @@ e6 10*0 10*12 10*bc 10*b6 10*d2 10*e6 10*ee
     <comp lib="4" loc="(770,330)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
-    <comp loc="(620,50)" name="ring"/>
+    <comp loc="(620,50)" name="ring4"/>
     <wire from="(140,100)" to="(180,100)"/>
     <wire from="(140,130)" to="(190,130)"/>
     <wire from="(140,160)" to="(190,160)"/>
@@ -6918,12 +6928,12 @@ e6 10*0 10*12 10*bc 10*b6 10*d2 10*e6 10*ee
     <a name="clabelup" val="east"/>
     <appear>
       <circ-anchor facing="east" height="6" width="6" x="107" y="47"/>
-      <circ-port height="10" pin="680,320" width="10" x="145" y="55"/>
-      <circ-port height="8" pin="140,290" width="8" x="46" y="96"/>
-      <circ-port height="8" pin="210,270" width="8" x="46" y="76"/>
-      <circ-port height="8" pin="210,300" width="8" x="46" y="116"/>
-      <circ-port height="8" pin="260,240" width="8" x="46" y="56"/>
-      <circ-port height="8" pin="270,320" width="8" x="46" y="136"/>
+      <circ-port height="10" pin="700,120" width="10" x="145" y="55"/>
+      <circ-port height="8" pin="220,40" width="8" x="46" y="56"/>
+      <circ-port height="8" pin="240,100" width="8" x="46" y="116"/>
+      <circ-port height="8" pin="270,120" width="8" x="46" y="136"/>
+      <circ-port height="8" pin="70,100" width="8" x="46" y="96"/>
+      <circ-port height="8" pin="70,70" width="8" x="46" y="76"/>
       <rect fill="none" height="121" stroke="#000000" stroke-width="2" width="80" x="60" y="50"/>
       <rect height="22" stroke="none" width="80" x="60" y="150"/>
       <rect height="3" stroke="none" width="10" x="50" y="119"/>
@@ -6940,39 +6950,89 @@ e6 10*0 10*12 10*bc 10*b6 10*d2 10*e6 10*ee
       <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="84">we</text>
       <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="10" font-weight="bold" text-anchor="middle" x="100" y="164">rammodule</text>
     </appear>
-    <comp lib="0" loc="(140,290)" name="Pin">
-      <a name="label" val="oe"/>
-    </comp>
-    <comp lib="0" loc="(210,270)" name="Pin">
-      <a name="label" val="we"/>
-    </comp>
-    <comp lib="0" loc="(210,300)" name="Pin">
-      <a name="label" val="clk"/>
-    </comp>
-    <comp lib="0" loc="(260,240)" name="Pin">
+    <comp lib="0" loc="(220,40)" name="Pin">
       <a name="label" val="addr"/>
       <a name="width" val="16"/>
     </comp>
-    <comp lib="0" loc="(270,320)" name="Pin">
+    <comp lib="0" loc="(240,100)" name="Pin">
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(270,120)" name="Pin">
       <a name="label" val="din"/>
       <a name="width" val="8"/>
     </comp>
-    <comp lib="0" loc="(680,320)" name="Pin">
+    <comp lib="0" loc="(70,100)" name="Pin">
+      <a name="label" val="oe"/>
+    </comp>
+    <comp lib="0" loc="(70,70)" name="Pin">
+      <a name="label" val="we"/>
+    </comp>
+    <comp lib="0" loc="(700,120)" name="Pin">
       <a name="facing" val="west"/>
       <a name="label" val="dout"/>
       <a name="output" val="true"/>
       <a name="width" val="8"/>
     </comp>
-    <comp lib="4" loc="(330,230)" name="RAM">
+    <comp lib="1" loc="(640,120)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="4" loc="(320,30)" name="RAM">
       <a name="addrWidth" val="16"/>
       <a name="appearance" val="logisim_evolution"/>
+      <a name="type" val="nonvolatile"/>
     </comp>
-    <wire from="(140,290)" to="(330,290)"/>
-    <wire from="(210,270)" to="(330,270)"/>
-    <wire from="(210,300)" to="(330,300)"/>
-    <wire from="(260,240)" to="(330,240)"/>
-    <wire from="(270,320)" to="(330,320)"/>
-    <wire from="(330,270)" to="(330,280)"/>
-    <wire from="(570,320)" to="(680,320)"/>
+    <wire from="(120,80)" to="(120,90)"/>
+    <wire from="(120,90)" to="(150,90)"/>
+    <wire from="(150,310)" to="(630,310)"/>
+    <wire from="(150,90)" to="(150,310)"/>
+    <wire from="(150,90)" to="(320,90)"/>
+    <wire from="(220,40)" to="(320,40)"/>
+    <wire from="(240,100)" to="(320,100)"/>
+    <wire from="(270,120)" to="(320,120)"/>
+    <wire from="(310,70)" to="(310,80)"/>
+    <wire from="(310,80)" to="(320,80)"/>
+    <wire from="(560,120)" to="(620,120)"/>
+    <wire from="(630,130)" to="(630,310)"/>
+    <wire from="(640,120)" to="(700,120)"/>
+    <wire from="(70,100)" to="(80,100)"/>
+    <wire from="(70,70)" to="(310,70)"/>
+    <wire from="(80,80)" to="(120,80)"/>
+    <wire from="(80,80)" to="(80,100)"/>
+  </circuit>
+  <circuit name="test2">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="test2"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="circuitvhdlpath" val=""/>
+    <a name="clabel" val=""/>
+    <a name="clabelfont" val="SansSerif bold 16"/>
+    <a name="clabelup" val="east"/>
+    <comp lib="0" loc="(160,110)" name="Clock"/>
+    <comp lib="0" loc="(160,40)" name="Pin">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(180,260)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(230,150)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+      <a name="pull" val="1"/>
+    </comp>
+    <comp lib="0" loc="(550,130)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="4" loc="(270,40)" name="RAM">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <wire from="(160,110)" to="(270,110)"/>
+    <wire from="(160,40)" to="(270,40)"/>
+    <wire from="(180,90)" to="(180,260)"/>
+    <wire from="(180,90)" to="(270,90)"/>
+    <wire from="(230,100)" to="(230,150)"/>
+    <wire from="(230,100)" to="(270,100)"/>
+    <wire from="(270,40)" to="(270,50)"/>
+    <wire from="(510,130)" to="(550,130)"/>
   </circuit>
 </project>
