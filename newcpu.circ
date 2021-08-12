@@ -2122,13 +2122,13 @@ end TCL_Generic;
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="OUTPUT REGISTER (HEX)"/>
     </comp>
-    <comp lib="8" loc="(885,1018)" name="Text">
-      <a name="font" val="SansSerif plain 12"/>
-      <a name="text" val="PC 16-BIT"/>
-    </comp>
     <comp lib="8" loc="(931,4172)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="OR"/>
+    </comp>
+    <comp lib="8" loc="(961,1052)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="PC 16-BIT"/>
     </comp>
     <comp lib="8" loc="(973,1341)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
@@ -3364,6 +3364,133 @@ end TCL_Generic;
     <wire from="(960,160)" to="(1010,160)"/>
     <wire from="(960,160)" to="(960,260)"/>
     <wire from="(960,260)" to="(1000,260)"/>
+  </circuit>
+  <circuit name="cpuclock">
+    <a name="appearance" val="custom"/>
+    <a name="circuit" val="cpuclock"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="circuitvhdlpath" val=""/>
+    <a name="clabel" val=""/>
+    <a name="clabelfont" val="SansSerif bold 12"/>
+    <a name="clabelup" val="east"/>
+    <appear>
+      <circ-anchor facing="east" height="6" width="6" x="107" y="47"/>
+      <circ-port height="10" pin="390,30" width="10" x="125" y="55"/>
+      <circ-port height="10" pin="420,410" width="10" x="125" y="75"/>
+      <circ-port height="10" pin="490,70" width="10" x="125" y="95"/>
+      <circ-port height="8" pin="110,30" width="8" x="46" y="56"/>
+      <circ-port height="8" pin="80,140" width="8" x="46" y="96"/>
+      <rect fill="none" height="79" stroke="#000000" stroke-width="2" width="63" x="60" y="50"/>
+      <rect height="20" stroke="none" width="63" x="61" y="109"/>
+      <rect height="3" stroke="none" width="10" x="123" y="59"/>
+      <rect height="3" stroke="none" width="10" x="123" y="79"/>
+      <rect height="3" stroke="none" width="10" x="49" y="99"/>
+      <rect height="3" stroke="none" width="10" x="50" y="59"/>
+      <rect height="3" stroke="none" width="7" x="125" y="99"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="121" y="64">clk</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="64" y="103">step</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="64">pause</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="97" y="103">cclk</text>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="10" font-weight="bold" text-anchor="middle" x="91" y="121">cpuclock</text>
+      <text dominant-baseline="central" font-family="Dialog" font-size="12" text-anchor="middle" x="110" y="79">clk2</text>
+    </appear>
+    <comp lib="0" loc="(100,140)" name="Tunnel">
+      <a name="label" val="step"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(110,30)" name="Pin">
+      <a name="label" val="pause"/>
+    </comp>
+    <comp lib="0" loc="(110,70)" name="Clock"/>
+    <comp lib="0" loc="(140,30)" name="Tunnel">
+      <a name="label" val="pause"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(210,220)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="pause"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(210,70)" name="Tunnel">
+      <a name="label" val="MAINCLK"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(220,290)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="step"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(290,440)" name="Tunnel">
+      <a name="label" val="MAINCLK"/>
+      <a name="labelfont" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(390,30)" name="Pin">
+      <a name="label" val="clk"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(420,410)" name="Pin">
+      <a name="label" val="clk2"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(480,360)" name="Tunnel">
+      <a name="label" val="cpuCLKdiv2"/>
+      <a name="labelfont" val="SansSerif bold 10"/>
+    </comp>
+    <comp lib="0" loc="(490,70)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="label" val="cpuclk"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(80,140)" name="Pin">
+      <a name="label" val="step"/>
+    </comp>
+    <comp lib="1" loc="(330,200)" name="NOT Gate"/>
+    <comp lib="1" loc="(450,180)" name="AND Gate"/>
+    <comp lib="1" loc="(450,270)" name="AND Gate"/>
+    <comp lib="1" loc="(580,220)" name="OR Gate"/>
+    <comp lib="4" loc="(310,350)" name="D Flip-Flop">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <wire from="(110,30)" to="(140,30)"/>
+    <wire from="(110,70)" to="(170,70)"/>
+    <wire from="(170,130)" to="(260,130)"/>
+    <wire from="(170,70)" to="(170,130)"/>
+    <wire from="(170,70)" to="(210,70)"/>
+    <wire from="(210,220)" to="(260,220)"/>
+    <wire from="(220,290)" to="(400,290)"/>
+    <wire from="(260,130)" to="(260,160)"/>
+    <wire from="(260,130)" to="(400,130)"/>
+    <wire from="(260,160)" to="(400,160)"/>
+    <wire from="(260,200)" to="(260,220)"/>
+    <wire from="(260,200)" to="(300,200)"/>
+    <wire from="(260,220)" to="(260,250)"/>
+    <wire from="(260,250)" to="(400,250)"/>
+    <wire from="(280,400)" to="(280,440)"/>
+    <wire from="(280,400)" to="(300,400)"/>
+    <wire from="(280,440)" to="(290,440)"/>
+    <wire from="(300,330)" to="(300,360)"/>
+    <wire from="(300,330)" to="(370,330)"/>
+    <wire from="(330,200)" to="(400,200)"/>
+    <wire from="(360,360)" to="(430,360)"/>
+    <wire from="(360,400)" to="(370,400)"/>
+    <wire from="(370,330)" to="(370,400)"/>
+    <wire from="(390,30)" to="(400,30)"/>
+    <wire from="(400,30)" to="(400,130)"/>
+    <wire from="(420,410)" to="(430,410)"/>
+    <wire from="(430,360)" to="(430,410)"/>
+    <wire from="(430,360)" to="(480,360)"/>
+    <wire from="(450,120)" to="(620,120)"/>
+    <wire from="(450,180)" to="(480,180)"/>
+    <wire from="(450,270)" to="(490,270)"/>
+    <wire from="(450,70)" to="(450,120)"/>
+    <wire from="(450,70)" to="(490,70)"/>
+    <wire from="(480,180)" to="(480,200)"/>
+    <wire from="(480,200)" to="(530,200)"/>
+    <wire from="(490,240)" to="(490,270)"/>
+    <wire from="(490,240)" to="(530,240)"/>
+    <wire from="(580,220)" to="(620,220)"/>
+    <wire from="(620,120)" to="(620,220)"/>
+    <wire from="(80,140)" to="(100,140)"/>
   </circuit>
   <circuit name="segdecdisplay">
     <a name="appearance" val="logisim_evolution"/>
@@ -6321,133 +6448,6 @@ e6 10*0 10*12 10*bc 10*b6 10*d2 10*e6 10*ee
     <wire from="(900,440)" to="(920,440)"/>
     <wire from="(920,130)" to="(940,130)"/>
   </circuit>
-  <circuit name="cpuclock">
-    <a name="appearance" val="custom"/>
-    <a name="circuit" val="cpuclock"/>
-    <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="circuitvhdlpath" val=""/>
-    <a name="clabel" val=""/>
-    <a name="clabelfont" val="SansSerif bold 12"/>
-    <a name="clabelup" val="east"/>
-    <appear>
-      <circ-anchor facing="east" height="6" width="6" x="107" y="47"/>
-      <circ-port height="10" pin="390,30" width="10" x="125" y="55"/>
-      <circ-port height="10" pin="420,410" width="10" x="125" y="75"/>
-      <circ-port height="10" pin="490,70" width="10" x="125" y="95"/>
-      <circ-port height="8" pin="110,30" width="8" x="46" y="56"/>
-      <circ-port height="8" pin="80,140" width="8" x="46" y="96"/>
-      <rect fill="none" height="79" stroke="#000000" stroke-width="2" width="63" x="60" y="50"/>
-      <rect height="20" stroke="none" width="63" x="61" y="109"/>
-      <rect height="3" stroke="none" width="10" x="123" y="59"/>
-      <rect height="3" stroke="none" width="10" x="123" y="79"/>
-      <rect height="3" stroke="none" width="10" x="49" y="99"/>
-      <rect height="3" stroke="none" width="10" x="50" y="59"/>
-      <rect height="3" stroke="none" width="7" x="125" y="99"/>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="121" y="64">clk</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="64" y="103">step</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="64">pause</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="97" y="103">cclk</text>
-      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Dialog" font-size="10" font-weight="bold" text-anchor="middle" x="91" y="121">cpuclock</text>
-      <text dominant-baseline="central" font-family="Dialog" font-size="12" text-anchor="middle" x="110" y="79">clk2</text>
-    </appear>
-    <comp lib="0" loc="(100,140)" name="Tunnel">
-      <a name="label" val="step"/>
-      <a name="labelfont" val="SansSerif bold 12"/>
-    </comp>
-    <comp lib="0" loc="(110,30)" name="Pin">
-      <a name="label" val="pause"/>
-    </comp>
-    <comp lib="0" loc="(110,70)" name="Clock"/>
-    <comp lib="0" loc="(140,30)" name="Tunnel">
-      <a name="label" val="pause"/>
-      <a name="labelfont" val="SansSerif bold 12"/>
-    </comp>
-    <comp lib="0" loc="(210,220)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="pause"/>
-      <a name="labelfont" val="SansSerif bold 12"/>
-    </comp>
-    <comp lib="0" loc="(210,70)" name="Tunnel">
-      <a name="label" val="MAINCLK"/>
-      <a name="labelfont" val="SansSerif bold 12"/>
-    </comp>
-    <comp lib="0" loc="(220,290)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="step"/>
-      <a name="labelfont" val="SansSerif bold 12"/>
-    </comp>
-    <comp lib="0" loc="(290,440)" name="Tunnel">
-      <a name="label" val="MAINCLK"/>
-      <a name="labelfont" val="SansSerif bold 12"/>
-    </comp>
-    <comp lib="0" loc="(390,30)" name="Pin">
-      <a name="label" val="clk"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp lib="0" loc="(420,410)" name="Pin">
-      <a name="label" val="clk2"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp lib="0" loc="(480,360)" name="Tunnel">
-      <a name="label" val="cpuCLKdiv2"/>
-      <a name="labelfont" val="SansSerif bold 10"/>
-    </comp>
-    <comp lib="0" loc="(490,70)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="label" val="cpuclk"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp lib="0" loc="(80,140)" name="Pin">
-      <a name="label" val="step"/>
-    </comp>
-    <comp lib="1" loc="(330,200)" name="NOT Gate"/>
-    <comp lib="1" loc="(450,180)" name="AND Gate"/>
-    <comp lib="1" loc="(450,270)" name="AND Gate"/>
-    <comp lib="1" loc="(580,220)" name="OR Gate"/>
-    <comp lib="4" loc="(310,350)" name="D Flip-Flop">
-      <a name="appearance" val="logisim_evolution"/>
-    </comp>
-    <wire from="(110,30)" to="(140,30)"/>
-    <wire from="(110,70)" to="(170,70)"/>
-    <wire from="(170,130)" to="(260,130)"/>
-    <wire from="(170,70)" to="(170,130)"/>
-    <wire from="(170,70)" to="(210,70)"/>
-    <wire from="(210,220)" to="(260,220)"/>
-    <wire from="(220,290)" to="(400,290)"/>
-    <wire from="(260,130)" to="(260,160)"/>
-    <wire from="(260,130)" to="(400,130)"/>
-    <wire from="(260,160)" to="(400,160)"/>
-    <wire from="(260,200)" to="(260,220)"/>
-    <wire from="(260,200)" to="(300,200)"/>
-    <wire from="(260,220)" to="(260,250)"/>
-    <wire from="(260,250)" to="(400,250)"/>
-    <wire from="(280,400)" to="(280,440)"/>
-    <wire from="(280,400)" to="(300,400)"/>
-    <wire from="(280,440)" to="(290,440)"/>
-    <wire from="(300,330)" to="(300,360)"/>
-    <wire from="(300,330)" to="(370,330)"/>
-    <wire from="(330,200)" to="(400,200)"/>
-    <wire from="(360,360)" to="(430,360)"/>
-    <wire from="(360,400)" to="(370,400)"/>
-    <wire from="(370,330)" to="(370,400)"/>
-    <wire from="(390,30)" to="(400,30)"/>
-    <wire from="(400,30)" to="(400,130)"/>
-    <wire from="(420,410)" to="(430,410)"/>
-    <wire from="(430,360)" to="(430,410)"/>
-    <wire from="(430,360)" to="(480,360)"/>
-    <wire from="(450,120)" to="(620,120)"/>
-    <wire from="(450,180)" to="(480,180)"/>
-    <wire from="(450,270)" to="(490,270)"/>
-    <wire from="(450,70)" to="(450,120)"/>
-    <wire from="(450,70)" to="(490,70)"/>
-    <wire from="(480,180)" to="(480,200)"/>
-    <wire from="(480,200)" to="(530,200)"/>
-    <wire from="(490,240)" to="(490,270)"/>
-    <wire from="(490,240)" to="(530,240)"/>
-    <wire from="(580,220)" to="(620,220)"/>
-    <wire from="(620,120)" to="(620,220)"/>
-    <wire from="(80,140)" to="(100,140)"/>
-  </circuit>
   <circuit name="ring6">
     <a name="appearance" val="custom"/>
     <a name="circuit" val="ring6"/>
@@ -6837,7 +6837,7 @@ e6 10*0 10*12 10*bc 10*b6 10*d2 10*e6 10*ee
     <a name="circuit" val="pcreg4"/>
     <a name="circuitnamedboxfixedsize" val="false"/>
     <a name="circuitvhdlpath" val=""/>
-    <a name="clabel" val=""/>
+    <a name="clabel" val="PC-4bit"/>
     <a name="clabelfont" val="SansSerif bold 16"/>
     <a name="clabelup" val="east"/>
     <comp lib="0" loc="(1060,380)" name="Pull Resistor">
