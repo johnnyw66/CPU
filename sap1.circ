@@ -24,7 +24,6 @@
     </tool>
     <tool name="Pin">
       <a name="appearance" val="NewPins"/>
-      <a name="radix" val="16"/>
     </tool>
     <tool name="Probe">
       <a name="radix" val="10unsigned"/>
@@ -2363,7 +2362,7 @@ end TCL_Generic;
       <a name="facing" val="north"/>
     </comp>
     <comp lib="5" loc="(1070,3670)" name="7-Segment Display">
-      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@680860b7"/>
+      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@9f6575c"/>
       <a name="label" val="digit4"/>
       <a name="labelloc" val="south"/>
     </comp>
@@ -2371,17 +2370,17 @@ end TCL_Generic;
       <a name="facing" val="north"/>
     </comp>
     <comp lib="5" loc="(1120,3670)" name="7-Segment Display">
-      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@1aa94156"/>
+      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@efddeae"/>
       <a name="label" val="digit3"/>
       <a name="labelloc" val="south"/>
     </comp>
     <comp lib="5" loc="(1170,3670)" name="7-Segment Display">
-      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@469d130c"/>
+      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@3c515b92"/>
       <a name="label" val="digit2"/>
       <a name="labelloc" val="south"/>
     </comp>
     <comp lib="5" loc="(1220,3670)" name="7-Segment Display">
-      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@67dfbf2"/>
+      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@e88af91"/>
       <a name="label" val="digit1"/>
       <a name="labelloc" val="south"/>
     </comp>
@@ -2394,11 +2393,11 @@ end TCL_Generic;
       <a name="facing" val="south"/>
     </comp>
     <comp lib="5" loc="(190,3380)" name="7-Segment Display">
-      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@2ddb2e52"/>
+      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@35ff55ab"/>
       <a name="labelvisible" val="true"/>
     </comp>
     <comp lib="5" loc="(190,3730)" name="7-Segment Display">
-      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@7da8694e"/>
+      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@5517f514"/>
       <a name="labelvisible" val="true"/>
     </comp>
     <comp lib="5" loc="(200,4450)" name="LED">
@@ -2413,11 +2412,11 @@ end TCL_Generic;
       <a name="facing" val="south"/>
     </comp>
     <comp lib="5" loc="(290,3380)" name="7-Segment Display">
-      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@53831084"/>
+      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@63aca9ef"/>
       <a name="labelvisible" val="true"/>
     </comp>
     <comp lib="5" loc="(290,3730)" name="7-Segment Display">
-      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@3ac8d36d"/>
+      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@2813662c"/>
       <a name="labelvisible" val="true"/>
     </comp>
     <comp lib="5" loc="(30,4450)" name="LED">
@@ -2441,11 +2440,11 @@ end TCL_Generic;
       <a name="facing" val="south"/>
     </comp>
     <comp lib="5" loc="(390,3380)" name="7-Segment Display">
-      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@4e15d3d8"/>
+      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@678e2c88"/>
       <a name="labelvisible" val="true"/>
     </comp>
     <comp lib="5" loc="(390,3730)" name="7-Segment Display">
-      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@70c9314d"/>
+      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@d5bca38"/>
       <a name="labelvisible" val="true"/>
     </comp>
     <comp lib="5" loc="(420,4270)" name="LED">
@@ -2512,11 +2511,11 @@ end TCL_Generic;
       <a name="facing" val="north"/>
     </comp>
     <comp lib="5" loc="(600,3380)" name="7-Segment Display">
-      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@3b8518e0"/>
+      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@b3ef9ad"/>
       <a name="labelvisible" val="true"/>
     </comp>
     <comp lib="5" loc="(600,3660)" name="7-Segment Display">
-      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@472ae746"/>
+      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@382fcce0"/>
       <a name="labelvisible" val="true"/>
     </comp>
     <comp lib="5" loc="(660,4130)" name="LED">
@@ -2529,11 +2528,11 @@ end TCL_Generic;
       <a name="facing" val="south"/>
     </comp>
     <comp lib="5" loc="(700,3380)" name="7-Segment Display">
-      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@27c17768"/>
+      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@2ed35d01"/>
       <a name="labelvisible" val="true"/>
     </comp>
     <comp lib="5" loc="(700,3660)" name="7-Segment Display">
-      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@1e3b6984"/>
+      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@7d0a48e9"/>
       <a name="labelvisible" val="true"/>
     </comp>
     <comp lib="5" loc="(700,4240)" name="Button"/>
@@ -2543,11 +2542,11 @@ end TCL_Generic;
     <comp lib="5" loc="(760,1150)" name="Button"/>
     <comp lib="5" loc="(80,410)" name="Button"/>
     <comp lib="5" loc="(820,3380)" name="7-Segment Display">
-      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@dea20bb"/>
+      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@1852574"/>
       <a name="labelvisible" val="true"/>
     </comp>
     <comp lib="5" loc="(840,3660)" name="7-Segment Display">
-      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@1deae697"/>
+      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@470ba168"/>
       <a name="labelvisible" val="true"/>
     </comp>
     <comp lib="5" loc="(840,4130)" name="LED">
@@ -2558,11 +2557,11 @@ end TCL_Generic;
     </comp>
     <comp lib="5" loc="(870,4270)" name="LED"/>
     <comp lib="5" loc="(90,3380)" name="7-Segment Display">
-      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@31bca875"/>
+      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@7304d7dd"/>
       <a name="labelvisible" val="true"/>
     </comp>
     <comp lib="5" loc="(90,3730)" name="7-Segment Display">
-      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@748e908f"/>
+      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@5c668454"/>
       <a name="labelvisible" val="true"/>
     </comp>
     <comp lib="5" loc="(90,4450)" name="LED">
@@ -2570,7 +2569,7 @@ end TCL_Generic;
       <a name="facing" val="south"/>
     </comp>
     <comp lib="5" loc="(920,3380)" name="7-Segment Display">
-      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@283d895d"/>
+      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@74e0b429"/>
       <a name="labelvisible" val="true"/>
     </comp>
     <comp lib="5" loc="(920,890)" name="Button"/>
@@ -2578,7 +2577,7 @@ end TCL_Generic;
       <a name="facing" val="north"/>
     </comp>
     <comp lib="5" loc="(940,3660)" name="7-Segment Display">
-      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@62a90c93"/>
+      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@6e7a4b3c"/>
       <a name="labelvisible" val="true"/>
     </comp>
     <comp lib="8" loc="(1007,1232)" name="Text">
@@ -2668,6 +2667,10 @@ end TCL_Generic;
     <comp lib="8" loc="(544,620)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="SAP1- 8bit Bus Fudge"/>
+    </comp>
+    <comp lib="8" loc="(557,2546)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="Example: Load 'simpleprog' into RAM before resetting the circuit."/>
     </comp>
     <comp lib="8" loc="(571,4172)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
@@ -4036,7 +4039,6 @@ end TCL_Generic;
       <a name="label" val="cpuCLK"/>
       <a name="labelfont" val="SansSerif bold 12"/>
       <a name="output" val="true"/>
-      <a name="radix" val="16"/>
     </comp>
     <comp lib="0" loc="(880,400)" name="Pin">
       <a name="appearance" val="NewPins"/>
@@ -4044,7 +4046,6 @@ end TCL_Generic;
       <a name="label" val="ncpuCLK"/>
       <a name="labelfont" val="SansSerif bold 12"/>
       <a name="output" val="true"/>
-      <a name="radix" val="16"/>
     </comp>
     <comp lib="0" loc="(880,430)" name="Pin">
       <a name="appearance" val="NewPins"/>
@@ -4052,7 +4053,6 @@ end TCL_Generic;
       <a name="label" val="CLK"/>
       <a name="labelfont" val="SansSerif bold 12"/>
       <a name="output" val="true"/>
-      <a name="radix" val="16"/>
     </comp>
     <comp lib="0" loc="(880,460)" name="Pin">
       <a name="appearance" val="NewPins"/>
@@ -4060,7 +4060,6 @@ end TCL_Generic;
       <a name="label" val="nCLK"/>
       <a name="labelfont" val="SansSerif bold 12"/>
       <a name="output" val="true"/>
-      <a name="radix" val="16"/>
     </comp>
     <comp lib="0" loc="(880,500)" name="Pin">
       <a name="appearance" val="NewPins"/>
@@ -4068,7 +4067,6 @@ end TCL_Generic;
       <a name="label" val="clkd2"/>
       <a name="labelfont" val="SansSerif bold 12"/>
       <a name="output" val="true"/>
-      <a name="radix" val="16"/>
     </comp>
     <comp lib="1" loc="(240,540)" name="Controlled Buffer">
       <a name="width" val="3"/>
@@ -9435,7 +9433,6 @@ e6 10*0 10*12 10*bc 10*b6 10*d2 10*e6 10*ee
     <comp lib="0" loc="(70,100)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="oe"/>
-      <a name="radix" val="16"/>
     </comp>
     <comp lib="0" loc="(70,70)" name="Pin">
       <a name="appearance" val="NewPins"/>
@@ -13000,19 +12997,19 @@ f 1e e0 2d e0 2d e0 f0
       <a name="width" val="4"/>
     </comp>
     <comp lib="5" loc="(140,150)" name="7-Segment Display">
-      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@3682ffb3"/>
+      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@3b15c311"/>
       <a name="labelvisible" val="true"/>
     </comp>
     <comp lib="5" loc="(190,150)" name="7-Segment Display">
-      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@36880b04"/>
+      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@53b9b403"/>
       <a name="labelvisible" val="true"/>
     </comp>
     <comp lib="5" loc="(240,150)" name="7-Segment Display">
-      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@723b0be9"/>
+      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@220903a1"/>
       <a name="labelvisible" val="true"/>
     </comp>
     <comp lib="5" loc="(290,150)" name="7-Segment Display">
-      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@58dc5ca9"/>
+      <a name="Dummy" val="com.cburch.logisim.fpga.data.ComponentMapInformationContainer@1e969f77"/>
       <a name="labelvisible" val="true"/>
     </comp>
     <comp loc="(420,390)" name="seg16hdisplay"/>
