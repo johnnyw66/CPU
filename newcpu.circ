@@ -1248,12 +1248,6 @@ end TCL_Generic;
       <a name="width" val="8"/>
     </comp>
     <comp lib="0" loc="(520,2830)" name="Probe"/>
-    <comp lib="0" loc="(520,2910)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="ConRing"/>
-      <a name="labelfont" val="SansSerif bold 12"/>
-      <a name="width" val="6"/>
-    </comp>
     <comp lib="0" loc="(520,950)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="uRESET"/>
@@ -2885,12 +2879,10 @@ end TCL_Generic;
     <wire from="(520,1610)" to="(520,1660)"/>
     <wire from="(520,1660)" to="(550,1660)"/>
     <wire from="(520,2830)" to="(530,2830)"/>
-    <wire from="(520,2910)" to="(530,2910)"/>
     <wire from="(520,950)" to="(540,950)"/>
     <wire from="(530,1610)" to="(530,1640)"/>
     <wire from="(530,1640)" to="(550,1640)"/>
-    <wire from="(530,2830)" to="(530,2910)"/>
-    <wire from="(530,2910)" to="(530,2920)"/>
+    <wire from="(530,2830)" to="(530,2920)"/>
     <wire from="(530,2920)" to="(530,2950)"/>
     <wire from="(530,2920)" to="(570,2920)"/>
     <wire from="(530,2970)" to="(570,2970)"/>
@@ -3634,7 +3626,10 @@ end TCL_Generic;
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 10 12
 123 456 789 abc def fed 0 0
-888 999 aaa bbb ccc ddd
+888 999 aaa bbb ccc ddd 0 0
+111 222 333 444 555 666 0 0
+888 999 aaa bbb ccc ddd 0 0
+101 202 303 404 505 606
 </a>
       <a name="dataWidth" val="12"/>
     </comp>
