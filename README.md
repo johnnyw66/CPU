@@ -1,7 +1,6 @@
 # CPU using LogiSim Evolution
 
-LogiSim CPU</br>
-14th August 2021
+14th August 2021</br>
 
 I've done a small detour from my original project. The LogiSim Evolution circuit called sap1.circ is
 a version of the SAP1 microprocessor from Albert Malvino's book **'Digital Computer Electronics - An introduction to Microcomputers'** (pub: 1983)
