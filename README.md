@@ -3,7 +3,7 @@ SAP1
 ---
 14th August 2021</br>
 
-I've done a small detour from my original project. The LogiSim Evolution circuit called sap1.circ is
+I've done a small detour from my original project. The LogiSim Evolution circuit called **sap1.circ** is
 a version of the SAP1 microprocessor from Albert Malvino's book **'Digital Computer Electronics - An introduction to Microcomputers'** (pub: 1983)
 
 Instructions on how to program the unit are shown in the circuit design.
