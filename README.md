@@ -8,7 +8,7 @@ a version of the SAP1 microprocessor from Albert Malvino's book **'Digital Compu
 Instructions on how to program the unit are shown in the circuit design.
 For those who have the book - I have referred to the 8-bit 'WBUS' reference in Malvino's book as 'DBUS'.
 
-My 16-bit address bus and enhanced ALU instructions are used in this design.
+My 16-bit address bus and enhanced ALU instructions are not being used in this design.
 
 
 I've tested this with a couple of simple programs - and it seems to behave as expected.
