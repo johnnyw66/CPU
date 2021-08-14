@@ -1,4 +1,4 @@
-# CPU
+# CPU using LogiSim Evolution
 
 LogiSim CPU</br>
 14th August 2021
