@@ -4,7 +4,7 @@ LogiSim CPU</br>
 14th August 2021
 
 I've done a small detour from my original project. The LogiSim Evolution circuit called sap1.circ is
-a version of the SAP1 microprocessor from Albert Malvino's book 'Digital Computer Electronics - An introduction to Microcomputers' (pub: 1983)
+a version of the SAP1 microprocessor from Albert Malvino's book **'Digital Computer Electronics - An introduction to Microcomputers'** (pub: 1983)
 
 Instructions on how to program the unit are shown in the circuit design.
 For those who have the book - I have referred to the 8-bit 'WBUS' reference in Malvino's book as 'DBUS'.
