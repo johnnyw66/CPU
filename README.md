@@ -1,6 +1,28 @@
 # CPU
 
 LogiSim CPU</br>
+14th August 2021
+
+I've done a small detour from my original project. The LogiSim Evolution circuit called sap1.circ is
+a version of the SAP1 microprocessor from Albert Malvino's book 'Digital Computer Electronics - An introduction to Microcomputers' (pub: 1983)
+
+Instructions on how to program the unit are shown in the circuit design.
+For those who have the book - I have referred to the 8-bit 'WBUS' reference in Malvino's book as 'DBUS'.
+
+My 16-bit address bus and enhanced ALU instructions are used in this design.
+
+
+I've tested this with a couple of simple programs - and it seems to behave as expected.
+Please do let me know if you find any problems.
+
+**Known Problems**
+If I run the CPU with very high frequency - I noticed that erroneous digits were appearing in the wrong LED
+segments. After spending some time debugging the circuit (using Logisim logic to 'watch' for a particular segment pin going 'high')- I've come to the conclusion that the problem is with LogiSim. I'm still investigating!
+
+
+
+
+
 
 10th August 2021 </br>
 Currently - newcpu.circ is the version running with latest LogiSim, 'LogiSim Evolution'.</br>
