@@ -1,5 +1,6 @@
 # CPU using LogiSim Evolution
-
+SAP1
+---
 14th August 2021</br>
 
 I've done a small detour from my original project. The LogiSim Evolution circuit called sap1.circ is
@@ -15,7 +16,7 @@ I've tested this with a couple of simple programs - and it seems to behave as ex
 Please do let me know if you find any problems.
 
 **Known Problems.**
-If I run the CPU with very high frequency - I noticed that erroneous digits were appearing in the wrong LED
+If I run the CPU with a very high frequency - I noticed that erroneous digits were appearing in the wrong LED
 segments. After spending some time debugging the circuit (using Logisim logic to 'watch' for a particular segment pin going 'high')- I've come to the conclusion that the problem is with LogiSim. I'm still investigating!
 
 
