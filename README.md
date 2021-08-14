@@ -15,7 +15,7 @@ My 16-bit address bus and enhanced ALU instructions are used in this design.
 I've tested this with a couple of simple programs - and it seems to behave as expected.
 Please do let me know if you find any problems.
 
-**Known Problems**
+**Known Problems.**
 If I run the CPU with very high frequency - I noticed that erroneous digits were appearing in the wrong LED
 segments. After spending some time debugging the circuit (using Logisim logic to 'watch' for a particular segment pin going 'high')- I've come to the conclusion that the problem is with LogiSim. I'm still investigating!
 
