@@ -19,7 +19,7 @@ It supports Write to Memory, Conditional Jumps.
 For what it's worth - I have also added in a Load Immediate Instruction 'LDI', which is a two byte instruction.
 The second byte - is the 8-bit value to which the A reg takes.
 
-    .ORG 0
+            .ORG 0
 
             LDI 0x01    
             STA E
@@ -28,6 +28,9 @@ The second byte - is the 8-bit value to which the A reg takes.
             SUB E
             JPNZ LOOP
             HLT
+              
+            .ORG F
+            .DB 0
 
 (byte code: 60 01 3E 60 C1 E0 2E 55 F0)     
 
