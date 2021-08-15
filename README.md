@@ -21,6 +21,35 @@ being lit.</br>
 
 After spending some time debugging the circuit (using Logisim logic to 'watch' for a particular segment pin going 'high')- I've come to the conclusion that the problem is with LogiSim. I'm still investigating!
 
+**SAP1 Enhanced.**
+
+The Enhanced Version (on the sap1en branch)- is now Turing Complete.
+It supports Write to Memory, Conditional Jumps.
+For what it's worth - I have also added in a Load Immediate Instruction 'LDI', which is a two byte instruction.
+The second byte - is the 8-bit value to which the A reg takes.
+
+    .ORG 0
+
+     LDI 0x01    
+     STA E
+     LDI 0xC1     ; Load 201 into the A Register
+LOOP:     
+     OUT
+     SUB E
+     JPNZ LOOP
+     HLT
+
+(byte code: 60 01 3E 60 C1 E0 2E 55 F0)     
+
+You can checkout the sap1en branch with -
+
+**git checkout sap1en**
+
+
+
+
+
+
 
 
 
