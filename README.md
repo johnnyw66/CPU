@@ -1,5 +1,5 @@
 # CPU using LogiSim Evolution
-SAP1
+SAP1 Enhanced Version - (with JMP instructions and writing to RAM)
 ---
 14th August 2021</br>
 
@@ -23,23 +23,26 @@ After spending some time debugging the circuit (using Logisim logic to 'watch' f
 
 **SAP1 Enhanced.**
 
-The Enhanced Version (on the sap1en branch)- is now Turing Complete.
-It supports Write to Memory, Conditional Jumps.
-For what it's worth - I have also added in a Load Immediate Instruction 'LDI', which is a two byte instruction.
+The enhanced version (on the **sap1en** branch)- is now Turing Complete (15th August 2021)
+It supports Write to memory and conditional jumps.
+For what it's worth - I have also added in a load immediate instruction 'LDI', which is a two byte instruction.
 The second byte - is the 8-bit value to which the A reg takes.
 
-    .ORG 0
+            .ORG 0
 
-     LDI 0x01    
-     STA E
-     LDI 0xC1     ; Load 201 into the A Register
-LOOP:     
-     OUT
-     SUB E
-     JPNZ LOOP
-     HLT
+            LDI 0x01
+            STA E
+            LDI 0xC9  ; loop 201 times - printing the decremented A Reg
+     LOOP:  
+            SUB E
+            OUT
+            JPNZ LOOP
+            HLT
 
-(byte code: 60 01 3E 60 C1 E0 2E 55 F0)     
+            .ORG F
+            .DB 0
+
+(byte code: 60 01 3E 60 C9 2E E0 55 F0)
 
 You can checkout the sap1en branch with -
 
