@@ -23,12 +23,12 @@ The second byte - is the 8-bit value to which the A reg takes.
 
             LDI 0x01    
             STA E
-            LDI 0xC1     
+            LDI 0xC9  ; loop 201 times - printing the decremented A Reg    
      LOOP:  OUT
             SUB E
             JPNZ LOOP
             HLT
-              
+
             .ORG F
             .DB 0
 
