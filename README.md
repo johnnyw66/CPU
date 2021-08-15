@@ -1,8 +1,6 @@
 # CPU using LogiSim Evolution
-SAP1
+SAP1 (non-enhanced version based on Albert Malvino's book)
 ---
-14th August 2021</br>
-
 I've done a small detour from my original project. The LogiSim Evolution circuit called **sap1.circ** is
 a version of the SAP1 microprocessor from Albert Malvino's book **'Digital Computer Electronics - An introduction to Microcomputers'** (pub: 1983)
 
@@ -10,6 +8,37 @@ Instructions on how to program the unit are shown in the circuit design.
 For those who have the book - I have referred to the 'WBUS' reference in Malvino's book as 'DBUS'.
 
 My 16-bit address bus and enhanced ALU instructions are not being used in this design.
+
+
+15th August 2021</br>
+
+**SAP1 Enhanced.**
+
+The enhanced version (on the **sap1en** branch)- is now Turing Complete.
+It supports Write to Memory, Conditional Jumps.
+For what it's worth - I have also added in a Load Immediate Instruction 'LDI', which is a two byte instruction.
+The second byte - is the 8-bit value to which the A reg takes.
+
+    .ORG 0
+
+     LDI 0x01    
+     STA E
+     LDI 0xC1     ; Load 201 into the A Register
+LOOP:     
+     OUT
+     SUB E
+     JPNZ LOOP
+     HLT
+
+(byte code: 60 01 3E 60 C1 E0 2E 55 F0)     
+
+You can checkout the sap1en branch with -
+
+**git checkout sap1en**
+
+
+14th August 2021</br>
+
 
 
 I've tested this with a couple of simple programs - and it seems to behave as expected.
