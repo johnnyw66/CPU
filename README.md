@@ -24,8 +24,7 @@ The second byte - is the 8-bit value to which the A reg takes.
      LDI 0x01    
      STA E
      LDI 0xC1     ; Load 201 into the A Register
-LOOP:     
-     OUT
+LOOP:OUT
      SUB E
      JPNZ LOOP
      HLT
@@ -38,8 +37,6 @@ You can checkout the sap1en branch with -
 
 
 14th August 2021</br>
-
-
 
 I've tested this with a couple of simple programs - and it seems to behave as expected.
 Please do let me know if you find any problems.
