@@ -23,8 +23,8 @@ The second byte - is the 8-bit value to which the A reg takes.
 
      LDI 0x01    
      STA E
-     LDI 0xC1     ; Load 201 into the A Register
-LOOP:OUT
+     LDI 0xC1     
+     OUT
      SUB E
      JPNZ LOOP
      HLT
