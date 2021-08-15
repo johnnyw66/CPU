@@ -24,8 +24,7 @@ The second byte - is the 8-bit value to which the A reg takes.
      LDI 0x01    
      STA E
      LDI 0xC1     
-LOOP:     
-     OUT
+     LOOP:OUT
      SUB E
      JPNZ LOOP
      HLT
