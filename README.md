@@ -21,13 +21,13 @@ The second byte - is the 8-bit value to which the A reg takes.
 
     .ORG 0
 
-     LDI 0x01    
-     STA E
-     LDI 0xC1     
+            LDI 0x01    
+            STA E
+            LDI 0xC1     
      LOOP:  OUT
             SUB E
-     JPNZ LOOP
-     HLT
+            JPNZ LOOP
+            HLT
 
 (byte code: 60 01 3E 60 C1 E0 2E 55 F0)     
 
