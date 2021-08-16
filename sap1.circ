@@ -2786,6 +2786,7 @@ f6ee f632 f6fe f6f6 127e7e 127e12 127ebc 127eb6
       <a name="appearance" val="logisim_evolution"/>
       <a name="asyncread" val="true"/>
       <a name="databus" val="bidir"/>
+      <a name="labelvisible" val="true"/>
       <a name="type" val="nonvolatile"/>
     </comp>
     <comp lib="4" loc="(380,2090)" name="Register">
@@ -3169,45 +3170,53 @@ f6ee f632 f6fe f6f6 127e7e 127e12 127ebc 127eb6
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="OUTPUT REGISTER (DECIMAL USING 32-BIT ROM)"/>
     </comp>
-    <comp lib="8" loc="(162,690)" name="Text">
+    <comp lib="8" loc="(165,727)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="HLT"/>
     </comp>
-    <comp lib="8" loc="(163,674)" name="Text">
+    <comp lib="8" loc="(166,711)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="OUT"/>
     </comp>
-    <comp lib="8" loc="(172,657)" name="Text">
+    <comp lib="8" loc="(175,694)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="SUB #D"/>
     </comp>
-    <comp lib="8" loc="(178,574)" name="Text">
+    <comp lib="8" loc="(181,611)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val=".ORG 0x0"/>
     </comp>
-    <comp lib="8" loc="(181,713)" name="Text">
+    <comp lib="8" loc="(1810,3929)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="32-bit ROM for Decimal 7Seg Display Unit"/>
+    </comp>
+    <comp lib="8" loc="(184,750)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val=".ORG 0xd"/>
     </comp>
-    <comp lib="8" loc="(181,727)" name="Text">
+    <comp lib="8" loc="(184,764)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val=".db 0x01"/>
     </comp>
-    <comp lib="8" loc="(182,751)" name="Text">
+    <comp lib="8" loc="(185,788)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val=".ORG 0xe"/>
     </comp>
-    <comp lib="8" loc="(182,765)" name="Text">
+    <comp lib="8" loc="(185,802)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val=".db 0x42"/>
     </comp>
-    <comp lib="8" loc="(184,787)" name="Text">
+    <comp lib="8" loc="(187,824)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val=".ORG 0xf"/>
     </comp>
-    <comp lib="8" loc="(184,801)" name="Text">
+    <comp lib="8" loc="(187,838)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val=".db 0x23"/>
+    </comp>
+    <comp lib="8" loc="(2047,3951)" name="Text">
+      <a name="font" val="SansSerif plain 10"/>
+      <a name="text" val="Currently unused display latch - so always show display Register contents"/>
     </comp>
     <comp lib="8" loc="(221,4036)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
@@ -3217,7 +3226,7 @@ f6ee f632 f6fe f6f6 127e7e 127e12 127ebc 127eb6
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="SP REGISTER"/>
     </comp>
-    <comp lib="8" loc="(237,541)" name="Text">
+    <comp lib="8" loc="(240,578)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="; Display results to display unit."/>
     </comp>
@@ -3225,7 +3234,7 @@ f6ee f632 f6fe f6f6 127e7e 127e12 127ebc 127eb6
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="4h'4 - JMP- Jump to Address"/>
     </comp>
-    <comp lib="8" loc="(265,642)" name="Text">
+    <comp lib="8" loc="(268,679)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="OUT      ; output to decimal display unit"/>
     </comp>
@@ -3233,11 +3242,11 @@ f6ee f632 f6fe f6f6 127e7e 127e12 127ebc 127eb6
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="16 bit Support for transferring from 8-bit DBUS to ABUS"/>
     </comp>
-    <comp lib="8" loc="(274,609)" name="Text">
+    <comp lib="8" loc="(277,646)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="ADD #E ; add the contents of address 0xe"/>
     </comp>
-    <comp lib="8" loc="(287,626)" name="Text">
+    <comp lib="8" loc="(290,663)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="SUB #D  ; subtract the contents of address 0xd"/>
     </comp>
@@ -3245,17 +3254,25 @@ f6ee f632 f6fe f6f6 127e7e 127e12 127ebc 127eb6
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="4h'5 - JPNZ- Jump on Non-Zero to Address"/>
     </comp>
-    <comp lib="8" loc="(304,431)" name="Text">
+    <comp lib="8" loc="(304,429)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="4h'6 - LDI - Load Immeditae (2 byte instruction)"/>
     </comp>
-    <comp lib="8" loc="(307,592)" name="Text">
+    <comp lib="8" loc="(309,445)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="4h'7 - ADDI - ADD Immeditae (2 byte instruction)"/>
+    </comp>
+    <comp lib="8" loc="(310,629)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="LDA #F  ; Load A Reg with the contents of address 0xf"/>
     </comp>
     <comp lib="8" loc="(321,320)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="4h'0 - LDA - Load the A Reg with contents at address"/>
+    </comp>
+    <comp lib="8" loc="(323,459)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="4h'8 - SUBI - SUBTRACT Immeditae (2 byte instruction)"/>
     </comp>
     <comp lib="8" loc="(325,379)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
@@ -3269,19 +3286,19 @@ f6ee f632 f6fe f6f6 127e7e 127e12 127ebc 127eb6
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="4h'1 - ADD - Add the contents of the address to the A Reg"/>
     </comp>
-    <comp lib="8" loc="(357,458)" name="Text">
+    <comp lib="8" loc="(356,492)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="4'hf - HLT Halt the SAP1 microprocessor - lower 4 bits is ignored."/>
     </comp>
-    <comp lib="8" loc="(359,443)" name="Text">
+    <comp lib="8" loc="(358,475)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="4h'e - OUT- Show the contents of the A Reg on the decimal display"/>
     </comp>
-    <comp lib="8" loc="(382,490)" name="Text">
+    <comp lib="8" loc="(385,527)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="Example code 'simpleprog' listed below - see 'RAM Module' for more instructions"/>
     </comp>
-    <comp lib="8" loc="(391,521)" name="Text">
+    <comp lib="8" loc="(394,558)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="; 'simpleprog' An example of SAP1 instructions to add and subtract memory contents."/>
     </comp>
@@ -3313,7 +3330,7 @@ f6ee f632 f6fe f6f6 127e7e 127e12 127ebc 127eb6
       <a name="font" val="SansSerif plain 40"/>
       <a name="text" val="SAP1 - 'Microprocessor' "/>
     </comp>
-    <comp lib="8" loc="(499,873)" name="Text">
+    <comp lib="8" loc="(507,959)" name="Text">
       <a name="font" val="SansSerif plain 18"/>
       <a name="text" val="** After loading a program in the 'RAM MODULE' go to the 'DISPLAY MODULE' below to watch the CPU running **"/>
     </comp>
@@ -4897,8 +4914,8 @@ f6ee f632 f6fe f6f6 127e7e 127e12 127ebc 127eb6
 5e3000 be3000 263000 3e3700 3e3000 3e3000 ff4 f4f
 5e3000 be3000 263000 3e3500 3e3000 3e3000 ff5 f5f
 5e3000 be3000 263000 5e3000 ac3000 3e3000 ff6 f6f
-5e3000 be3000 263000 774 775 776 ff7 f7f
-5e3000 be3000 263000 884 885 886 ff8 f8f
+5e3000 be3000 263000 5e3000 ae1000 3c7000 ff7 f7f
+5e3000 be3000 263000 5e3000 ae1000 3cf000 ff8 f8f
 5e3000 be3000 263000 994 995 996 ff9 f9f
 5e3000 be3000 263000 aa4 aa5 aa6 ffa faf
 5e3000 be3000 263000 bb4 bb5 bb6 ffb fbf
