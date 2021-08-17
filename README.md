@@ -72,9 +72,18 @@ The second byte - is the 8-bit value to which the A reg takes.
 (byte code: 60 01 3E 60 C9 2E E0 55 F0)
 
 
+15th August 2021
+
+I have now included a simple programmer - (next to the RAM module).
+
+Although it can address 16-bits, 12-bits are masked off for the original SAP1 machine.
+
+I personally prefer to program the CPU with the LogiSim GUI.
 
 
 
+Previous Posts
+----
 
 
 
