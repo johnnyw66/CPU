@@ -1,8 +1,7 @@
 # CPU using LogiSim Evolution
-SAP1 (non-enhanced version based on Albert Malvino's book)
+SAP1 Enhanced Version - (with JMP instructions and writing to RAM)
 ---
-I've done a small detour from my original project. The LogiSim Evolution circuit called **sap1.circ** is
-a version of the SAP1 microprocessor from Albert Malvino's book **'Digital Computer Electronics - An introduction to Microcomputers'** (pub: 1983)
+The LogiSim Evolution circuit called **sap1.circ** is a version of the SAP1 microprocessor from Albert Malvino's book **'Digital Computer Electronics - An introduction to Microcomputers'** (pub: 1983)
 
 Instructions on how to program the unit are shown in the circuit design.
 For those who have the book - I have referred to the 'WBUS' reference in Malvino's book as 'DBUS'.
@@ -14,8 +13,7 @@ My 16-bit address bus and enhanced ALU instructions are not being used in this d
 
 **SAP1 Enhanced.**
 
-The enhanced version (on the **sap1en** branch)- is now Turing Complete.
-It supports Write to Memory, Conditional Jumps.
+This enhanced version is now Turing Complete. It supports Write to Memory, Conditional Jumps.
 For what it's worth - I have also added in a Load Immediate Instruction 'LDI', which is a two byte instruction.
 The second byte - is the 8-bit value to which the A reg takes.
 
@@ -34,7 +32,7 @@ The second byte - is the 8-bit value to which the A reg takes.
 
 (byte code: 60 01 3E 60 C1 E0 2E 55 F0)     
 
-You can checkout the sap1en branch with -
+You can checkout the original Malvino SAP1 design with -
 
 **git checkout sap1en**
 
@@ -49,6 +47,33 @@ If I run the CPU with a very high frequency - I noticed that erroneous LED segme
 being lit.</br>
 
 After spending some time debugging the circuit (using Logisim logic to 'watch' for a particular segment pin going 'high')- I've come to the conclusion that the problem is with LogiSim. I'm still investigating!
+
+**SAP1 Enhanced.**
+
+The enhanced version is now Turing Complete (15th August 2021)
+It supports Write to memory and conditional jumps.
+For what it's worth - I have also added in a load immediate instruction 'LDI', which is a two byte instruction.
+The second byte - is the 8-bit value to which the A reg takes.
+
+            .ORG 0
+
+            LDI 0x01
+            STA E
+            LDI 0xC9  ; loop 201 times - printing the decremented A Reg
+     LOOP:  
+            SUB E
+            OUT
+            JPNZ LOOP
+            HLT
+
+            .ORG F
+            .DB 0
+
+(byte code: 60 01 3E 60 C9 2E E0 55 F0)
+
+
+
+
 
 
 
