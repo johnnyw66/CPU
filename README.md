@@ -23,10 +23,7 @@ After spending some time debugging the circuit (using Logisim logic to 'watch' f
 
 **SAP1 Enhanced.**
 
-The enhanced version (on the **sap1en** branch)- is now Turing Complete (15th August 2021)
-It supports Write to memory and conditional jumps.
-For what it's worth - I have also added in a load immediate instruction 'LDI', which is a two byte instruction.
-The second byte - is the 8-bit value to which the A reg takes.
+The enhanced version is now Turing Complete (15th August 2021). It supports Write to memory and conditional jumps. For what it's worth - I have also added in a load immediate instruction 'LDI', which is a two byte instruction. The second byte - is the 8-bit value to which the A reg takes.
 
             .ORG 0
 
@@ -44,15 +41,22 @@ The second byte - is the 8-bit value to which the A reg takes.
 
 (byte code: 60 01 3E 60 C9 2E E0 55 F0)
 
-You can checkout the sap1en branch with -
-
-**git checkout sap1en**
 
 
 
 
+15th August 2021
+
+I have now included a simple programmer - (next to the RAM module).
+
+Although it can address 16-bits, 12-bits are masked off for the original SAP1 machine.
+
+I personally prefer to program the CPU with the LogiSim GUI.
 
 
+
+Previous Posts
+----
 
 
 
