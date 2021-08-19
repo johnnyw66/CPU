@@ -53,6 +53,7 @@ I've tested this with a couple of simple programs - and it seems to behave as ex
 Please do let me know if you find any problems.
 
 **Known Problems.**
+---
 If I run the CPU with a very high frequency - I noticed that erroneous LED segments were sometimes
 being lit.</br>
 
