@@ -3,8 +3,8 @@ controlWordSize = 24
 ACTIVEHIGH = 1
 ACTIVELOW = 0
 
-# Definition of our  control lines and which bit in the control word they
-# occupy. We also define if the control bit is active low or active high.
+# Definition for each of our control lines. We define which bit in the
+# control word they occupy and if that control bit is active low or active high.
 
 
 clLines = [
@@ -129,6 +129,10 @@ def buildMicrocode():
 
     return
 
+def produceROMs():
+    print("@TODO")
+
+
 # opcodes.sort(reverse=True, key=myFunc)
 def sortKey(e):
     return e['bytecode']
@@ -141,5 +145,7 @@ def listMicrocode():
 try:
     buildMicrocode()
     listMicrocode()
+    #produceROMs()
+
 except Exception as e:
     print(f"**ERROR** {e}")
