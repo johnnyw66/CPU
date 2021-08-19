@@ -10,7 +10,7 @@ My 16-bit address bus and enhanced ALU instructions are not being used in this d
 
 **19th August 2021**</br>
 
-Version 1 of the utility buildcontrolrom.py can now produce control ROM contents -
+Version 1 of the utility **buildcontrolrom.py** can now produce control ROM contents -
 
 
 **15th August 2021**</br>
