@@ -8,6 +8,10 @@ For those who have the book - I have referred to the 'WBUS' reference in Malvino
 
 My 16-bit address bus and enhanced ALU instructions are not being used in this design.
 
+19th August 2021</br>
+
+Version 1 of the utility buildcontrolrom.py can now produce control ROM contents -
+
 
 15th August 2021</br>
 
