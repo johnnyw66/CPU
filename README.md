@@ -3,6 +3,14 @@ SAP1 Enhanced Version - (with JMP instructions and writing to RAM)
 ---
 The LogiSim Evolution circuit called **sap1.circ** is a version of the SAP1 microprocessor from Albert Malvino's book **'Digital Computer Electronics - An introduction to Microcomputers'** (pub: 1983)
 
+SAP1 is an 8-bit programmable processor with an 8-bit bus - supporting two arithmetic functions ADD and SUBTRACT.
+
+The ALU circuit actually supports ADD, SUBTRACT, AND, OR, XOR and SHIFT instructions.
+You can play around with it using the **TESTALU** subcircuit (found in **sap1.cir**)
+
+Just click on the input pin **fncsel** to select one of eight ALU operations (including **NOP**)
+
+
 Instructions on how to program the unit are shown in the circuit design.
 For those who have the book - I have referred to the 'WBUS' reference in Malvino's book as 'DBUS'.
 
