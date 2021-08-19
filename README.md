@@ -8,12 +8,18 @@ For those who have the book - I have referred to the 'WBUS' reference in Malvino
 
 My 16-bit address bus and enhanced ALU instructions are not being used in this design.
 
-19th August 2021</br>
+**19th August 2021**</br>
 
 Version 1 of the utility buildcontrolrom.py can now produce control ROM contents -
 
 
-15th August 2021</br>
+**15th August 2021**</br>
+
+I have now included a simple programmer - (next to the RAM module).
+
+Although it can address 16-bits, 12-bits are masked off for the original SAP1 machine.
+
+I personally prefer to program the CPU with the LogiSim GUI.
 
 **SAP1 Enhanced.**
 
@@ -41,7 +47,7 @@ You can checkout the original Malvino SAP1 design with -
 **git checkout sap1en**
 
 
-14th August 2021</br>
+**14th August 2021**</br>
 
 I've tested this with a couple of simple programs - and it seems to behave as expected.
 Please do let me know if you find any problems.
@@ -76,17 +82,11 @@ The second byte - is the 8-bit value to which the A reg takes.
 (byte code: 60 01 3E 60 C9 2E E0 55 F0)
 
 
-15th August 2021
-
-I have now included a simple programmer - (next to the RAM module).
-
-Although it can address 16-bits, 12-bits are masked off for the original SAP1 machine.
-
-I personally prefer to program the CPU with the LogiSim GUI.
 
 
 
 Previous Posts
+----
 ----
 
 
