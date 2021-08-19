@@ -45,7 +45,7 @@ clLines = [
 # Every microprocessor opcode instruction will have the
 # same three controlwords for T1,T2 and T3,
 # defined below
-fetchControlWords = [{'nLm'},{'nLm'},{'nLm'}]
+fetchControlWords = [{'Ep','nLm'},{'Cp'},{'nCE','nLi'}]
 
 
 
@@ -55,27 +55,117 @@ fetchControlWords = [{'nLm'},{'nLm'},{'nLm'}]
 # are already defined in our 'fetchControlWords' array.
 
 opcodes = [
-    {'name':'NOP','bytecode': 0, 'control':
+
+    {'name':'LDA','bytecode': 0, 'control':
+    [
+        {'nLm','nEi'},
+        {'nCE','nLa'}
+    ]},
+
+    {'name':'ADD','bytecode': 0x1,
+    'control':
+    [
+        {'nLm','nEi'},
+        {'nCE','nLb'},
+        {'nLa','Eu'}
+    ]},
+
+    {'name':'SUB','bytecode': 0x2,
+    'control':
+    [
+        {'nLm','nEi'},
+        {'nCE','nLb'},
+        {'nLa','Eu','Su'}
+    ]},
+
+
+
+    {'name':'STA','bytecode': 0x3,
+    'control':
+    [
+        {'nLm','nEi'},
+        {'Ea','Lr'}
+    ]},
+
+    {'name':'JMP','bytecode': 0x4,
+    'control':
+    [
+        {'Lp','f0','f1'}
+    ]},
+
+    {'name':'JPNZ','bytecode': 0x5,
+    'control':
+    [
+        {'Lp','f0'}
+    ]},
+
+    {'name':'LDI','bytecode': 0x6,
+    'control':
+    [
+        {'Ep','nLm'},
+        {'Cp','nCE','nLa'}
+    ]},
+
+    {'name':'ADDI','bytecode': 0x7,
+    'control':
+    [
+        {'Ep','nLm'},
+        {'Cp','nCE','nLb'},
+        {'nLa','Eu'}
+
+    ]},
+
+    {'name':'SUBI','bytecode': 0x8,
+    'control':
+    [
+        {'Ep','nLm'},
+        {'Cp','nCE','nLb'},
+        {'nLa','Eu','Su'}
+    ]},
+
+    {'name':'NOP','bytecode': 0x9,
+    'control':
     [
     ]},
 
-    {'name':'ADD','bytecode': 2,
+    {'name':'NOP1','bytecode': 0xa,
     'control':
     [
-        {'Eu'}
     ]},
 
-    {'name':'STA','bytecode': 1,
+    {'name':'NOP2','bytecode': 0xb,
     'control':
     [
-        {'Eu'}
-    ]}
+    ]},
+
+    {'name':'NOP3','bytecode': 0xc,
+    'control':
+    [
+    ]},
+
+    {'name':'NOP4','bytecode': 0xd,
+    'control':
+    [
+    ]},
+
+    {'name':'OUT','bytecode': 0xe,
+    'control':
+    [
+        {'Ea','nLo'},
+    ]},
+
+    {'name':'HLT','bytecode': 0xf,
+    'control':
+    [
+
+    ]},
 
 ]
 
 # Calculate the NOP microcode control word
 
 def buildNOPControlWord():
+
     NOPWord = 0
 
     for cl in clLines:
@@ -83,21 +173,25 @@ def buildNOPControlWord():
     return NOPWord
 
 def getControlLine(controlLineName):
+
     for cl in clLines:
         if (cl['key'] == controlLineName):
             return cl
     raise Exception(f"Can not find defn for control line {controlLineName}")
 
 
-def buildControlWord(controlList):
-    controlWord = 0
+def buildControlWord(controlList, NOPWord):
+
+    controlWordMask = 0
+
     for clKey in controlList:
         cl = getControlLine(clKey)
-        controlWord |= cl['active']<<cl['bit']
-    #print("buildControlWord",controlWord)
-    return controlWord
+        controlWordMask |= 1<<cl['bit']
+
+    return controlWordMask ^ NOPWord
 
 def checkInteg():
+
     bitcheck = 0 ;
     keySet = set()
 
@@ -113,39 +207,109 @@ def checkInteg():
         bitcheck |= bitnum
 
 def buildMicrocode():
+
     checkInteg()
     NOPWord = buildNOPControlWord()
-    print(f"NOP Word {NOPWord:06x}")
+    #print(f"NOP Word {NOPWord:06x}")
     for op in opcodes:
         #print(op)
-
-        op['tsize'] = len(op['control'])
-        op['controlword'] = 0
-
+        opSize = len(op['control'])
+        op['tsize'] = opSize
+        op['controlwords'] = []
+        #print()
         for tStateIndex,tStateCtrlst in enumerate(op['control']):
-            op['controlword']=buildControlWord(tStateCtrlst)
-            #print(f"{tStateIndex} {op['controlword']:06x} {op['name']:10} number of tstates {op['tsize']}")
-
+            op['controlwords'].append(buildControlWord(tStateCtrlst, NOPWord))
+            #print(f"T{tStateIndex + 4} 0x{op['controlwords'][tStateIndex]:06x} {op['name']:6} 0x{op['bytecode']:01x}")
+        #if (opSize < len(fetchControlWords)):
+        #    op['controlwords'].append(NOPWord)
+        #    op['tsize'] += 1
 
     return
 
-def produceROMs():
-    print("@TODO")
+
+# Produce LogiSim memory file ROM/RAM  files
+# from opcodes control word arrays.
+# In this version - the 'Execute' control words proceed
+# after the generic 'Fetch' control words
+
+def produce24BitROM(romName, raw = True):
+
+    opcodes.sort(key=sortKey)
+    print("Producing 24bit Rom")
+
+    file = open(romName, "w+")
+    file.write("v2.0 raw\n" if raw else "v3.0 hex words addressed\n")
+
+    fetchWords = []
+    nopCntWord = buildNOPControlWord()
+
+    for fmicrocode in fetchControlWords:
+        fetchWords.append(buildControlWord(fmicrocode, nopCntWord))
+
+    # Now start producing ROM output
+    address = 0
+    for op in opcodes:
+        if (not raw):
+            file.write(f"{address:02x}: ")
+
+        for word in fetchWords:
+            file.write(f"{word:06x} ")
+            #print(f"{word:06x} ", end = '')
+
+        for word in op['controlwords']:
+            file.write(f"{word:06x} ")
+            #print(f"{word:06x} ", end = '')
+
+        remaining =  8 - len(fetchWords) -  len(op['controlwords'])
+
+        for i in range(remaining):
+            file.write(f"{nopCntWord:06x} ")
+            #print(f"{nopCntWord:06x} ", end = '')
+        address += 8
+
+        file.write("\n")
+        #print()
+    file.close()
+
+def produceROMs(romType = 0, raw = True):
+    #
+    produce24BitROM('microcode24bit.rom', raw)
+
 
 
 # opcodes.sort(reverse=True, key=myFunc)
 def sortKey(e):
+
     return e['bytecode']
 
 def listMicrocode():
+
     opcodes.sort(key=sortKey)
+    accum = len(fetchControlWords)
+
     for op in opcodes:
+        op['wordoffset'] = accum
+        accum += op['tsize']
         print(op)
 
+
+
+
+# Main Code
+
 try:
+
+    # DEBUG calculate Control Words for T1,T2,T3
+
+    #NOPWord = buildNOPControlWord()
+
+    #for tstateInd, dfn in enumerate(fetchControlWords):
+    #    cw = buildControlWord(dfn,NOPWord)
+        #print(f"T{tstateInd + 1:01d} controlword {cw:06x}")
+
     buildMicrocode()
     listMicrocode()
-    #produceROMs()
+    produceROMs(romType = 0, raw = True)
 
 except Exception as e:
     print(f"**ERROR** {e}")
