@@ -271,9 +271,52 @@ def produce24BitROM(romName, raw = True):
         #print()
     file.close()
 
+def produce8BitROM(romName, shift, raw = True):
+
+    opcodes.sort(key=sortKey)
+    print("Producing 8-bit Roms shift=",shift)
+
+    file = open(romName, "w+")
+    file.write("v2.0 raw\n" if raw else "v3.0 hex words addressed\n")
+
+    fetchWords = []
+    nopCntWord = buildNOPControlWord()
+
+    for fmicrocode in fetchControlWords:
+        fetchWords.append(buildControlWord(fmicrocode, nopCntWord))
+
+    # Now start producing ROM output
+    address = 0
+    for op in opcodes:
+        if (not raw):
+            file.write(f"{address:02x}: ")
+
+        for word in fetchWords:
+            file.write(f"{((word>>shift) & 0xff) :02x} ")
+            #print(f"{word:06x} ", end = '')
+
+        for word in op['controlwords']:
+            file.write(f"{((word>>shift) & 0xff) :02x} ")
+            #print(f"{word:06x} ", end = '')
+
+        remaining =  8 - len(fetchWords) -  len(op['controlwords'])
+
+        for i in range(remaining):
+            file.write(f"{((nopCntWord>>shift) & 0xff):02x} ")
+            #print(f"{nopCntWord:06x} ", end = '')
+        address += 8
+
+        file.write("\n")
+        #print()
+    file.close()
+
+
 def produceROMs(romType = 0, raw = True):
     #
     produce24BitROM('microcode24bit.rom', raw)
+    produce8BitROM('microcode24bit-8bitrom-rom1.rom', 16,raw) # upper 8-bits
+    produce8BitROM('microcode24bit-8bitrom-rom2.rom', 8,raw) #middle 8-bits
+    produce8BitROM('microcode24bit-8bitrom-rom3.rom', 0,raw) #bottom 8-bits
 
 
 
